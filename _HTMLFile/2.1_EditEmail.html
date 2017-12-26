@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Training & Placement Division </title>
+    <!-- Favicon-->
+    <link rel="icon" href="http://citabu.ac.in/wp-content/uploads/2016/05/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body class="fp-page">
+<div class="fp-box">
+    <div class="logo">
+        <a href="javascript:void(0);"><b>CIT AbuRoad</b></a>
+        <small>Training & Placement Division</small>
+    </div>
+    <div class="card">
+        <div class="body">
+            <form id="EditEmail" method="POST" action="../_phpCode/2.3_updateMobileEmail.php">
+
+                <div class="msg">
+                    Please Enter your Roll No.
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">perm_identity</i>
+                        </span>
+                    <div class="form-line">
+                        <input type="text" style="text-transform: uppercase;" minlength="10" maxlength="10" name="rtuRoll" placeholder="14ECA*****"  class="form-control" required autofocus>
+                    </div>
+                </div>
+
+                <div class="msg">
+                    Please Enter your Mobile No.
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">phone</i>
+                        </span>
+                    <div class="form-line">
+                        <input type="text" style="text-transform: uppercase;" minlength="10" maxlength="10" name="newPhone" placeholder="12*45*78*0"  class="form-control" required autofocus>
+                    </div>
+                </div>
+
+                <div class="msg">
+                    Please Enter your Email Id.
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">mail</i>
+                        </span>
+                    <div class="form-line">
+                        <input type="email" style="
+                        text-transform: lowercase" name="newEmail" placeholder="user@domain.com"  class="form-control" required autofocus>
+                    </div>
+                </div>
+                <button class="btn btn-block btn-lg bg-pink waves-effect" type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core Js -->
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<!-- Waves Effect Plugin Js -->
+<script src="../plugins/node-waves/waves.js"></script>
+<!-- Validation Plugin Js -->
+<script src="../plugins/jquery-validation/jquery.validate.js"></script>
+<!-- Custom Js -->
+<script src="../js/admin.js"></script>
+<script src="../js/pages/examples/forgot-password.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>CIT AbuRoad</title>
+
+    <!-- Favicon-->
+    <link rel="icon" href="http://citabu.ac.in/wp-content/uploads/2016/05/favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="../plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../css/themes/all-themes.css" rel="stylesheet" />
+</head>
+
+<body class="theme-cyan">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="preloader">
+            <div class="spinner-layer pl-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <p>Please wait...</p>
+    </div>
+</div>
+<!-- #END# Page Loader -->
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+<!-- #END# Overlay For Sidebars -->
+<!-- Search Bar -->
+<div class="search-bar">
+    <div class="search-icon">
+        <i class="material-icons">search</i>
+    </div>
+    <input type="text" placeholder="START TYPING...">
+    <div class="close-search">
+        <i class="material-icons">close</i>
+    </div>
+</div>
+<!-- #END# Search Bar -->
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <center> <div class="navbar-header" style="float: none; margin-top:5px;">
+            <a class="navbar-brand"  style="float: none; ">CIT AbuRoad - Training & Placement Division  </a>
+        </div>
+    </div>
+</nav>
+<!-- #Top Bar -->
+
+<section class="content" style="margin-top:70px; margin-left:200px; margin-right:200px;  ">
+    <div class="container-fluid">
+        <div class="block-header"></div>
+        <!-- Body Copy -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+
+                        <div class="body">
+
+                            <p class="lead" style="text-align: center;"></p>
+                            <div class="row clearfix">
+                                <div class=" col-md-3 col-md-offset-2"><!-- Names -->
+                                    <p style="font-size:18px; font-weight: bold;">
+                                        Roll No :
+                                        <br> <br>
+                                        Full name :
+                                        <br> <br>
+                                        Father's Name :
+                                        <br> <br>
+                                        Branch :
+                                        <br> <br>
+                                        Gender :
+                                        <br> <br>
+                                        Mobile :
+                                        <br> <br>
+                                        E-mail :
+                                        <br>
+                                    </p>
+                                </div>
+                                <div class=" col-md-7 "><!-- Names Value -->
+                                    <p  style="font-size:18px;">
+                                        <?php echo $rtu_roll;?>
+                                        <br> <br>
+                                        <?php echo ucwords($user["name"]);?>
+                                        <br> <br>
+                                        <?php echo $user["fname"];?>
+                                        <br> <br>
+                                        <?php echo $user["branch"];?>
+                                        <br> <br>
+                                        <?php echo $user["gender"];?>
+                                        <br> <br>
+                                        <!--<?php echo "XXXXXX".substr($user["mobile"],-4);?>-->
+                                        <?php echo ($user["mobile"] != NULL ? ("XXXXXX".substr($user["mobile"],-4)) : " ");?>
+                                        <br> <br>
+                                        <?php echo $user["email"];?>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <form id="userInfo" method="POST" action="../_phpCode/3.0_userOTPGent.php">
+                             <input type="hidden" name="rollNo" value="<?php echo $rtu_roll ?>">
+                             <div class="row clearfix">
+                                <div class="col-md-5 col-md-offset-4">
+                                    <button type="submit" class="btn btn-block btn-lg bg-pink waves-effect">VERIFY and SUBMIT</button>
+                                </div>
+                            </div>
+                            </form>
+
+                            <br>
+                            <p style="font-size: 16px;" class="col-md-offset-4">
+                                &nbsp; &nbsp;
+                                To Update Email And Mobile No.  <a href="../_HTMLFile/2.1_EditEmail.html"> CLICK HERE </a>
+                            </p>
+                            <p style="font-size: 16px;" class="col-md-offset-4">
+                                For any inappropriate Details Contact Secrecy Department.
+                            </p>
+                            <br>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Unordered List -->
+    </div>
+</section>
+
+<!-- Jquery Core Js -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core Js -->
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<!-- Select Plugin Js -->
+<script src="../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<!-- Slimscroll Plugin Js -->
+<script src="../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- Waves Effect Plugin Js -->
+<script src="../plugins/node-waves/waves.js"></script>
+<!-- Custom Js -->
+<script src="../js/admin.js"></script>
+<!-- Demo Js -->
+<script src="../js/demo.js"></script>
+</body>
+
+</html>
